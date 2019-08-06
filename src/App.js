@@ -73,12 +73,10 @@ class App extends Component {
     return (
       <div className="App">
         
-        <button 
-        style={style}
-        onClick={() => this.toggleNeighborhood()}>Switch Name</button>
         <p>{''+this.state.phbao} </p>
         <p>{''+this.state.gifted} </p>
 
+<div className="controls-container">
 
         <label >Grade:</label>
         <input type="number" value={this.state.grade} onChange={this.handleGradeChange} min="0" max="4" /> 
@@ -91,8 +89,10 @@ class App extends Component {
 
         <label >Gifted:</label>
         <input type="checkbox" checked={this.state.gifted} onChange={this.handleGiftedChange} /> 
-        
-        {this.state.schools.map(
+</div>
+
+        <div className="card-container">
+          {this.state.schools.map(
               (object, i) => (
                 (!this.state.gifted && object.gifted
                   || object.lowest_grade > this.state.grade ) ? false :
@@ -102,7 +102,8 @@ class App extends Component {
                 gifted = {this.state.gifted}
                 phbao = {this.state.phbao} />
               )
-        )}
+          )}
+        </div>
       </div>
     );
       }

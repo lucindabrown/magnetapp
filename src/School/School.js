@@ -9,6 +9,7 @@ const school = ( props ) => {
     let spots = props.data.spots[props.grade];
     let applicants = props.data.applicants[props.grade];
     let probability = 0;
+    let ktranslator = props.data.lowest_grade;
     if(applicants > 0){
     	probability = 1.0*spots/applicants*12;
     	if (props.phbao) {
@@ -25,26 +26,31 @@ const school = ( props ) => {
     	probability = Math.round(probability);
     }
 
+    if(ktranslator < 1){
+        ktranslator = "K";
+    }
     
-
+    
     return (
         <div className="school"> 
-            <p onClick={props.click}> 
-            {props.data.name}</p> 
-            <p> {props.phbao}</p>
-            <p> {spots}</p>
-            <p> {applicants}</p>
-            <p> {props.rejections}</p>
-            <p>Grades {props.data.lowest_grade} - {props.data.highest_grade}</p>
-            <p>Bus Stops </p>
-            <ul>{props.data.stops.map(
-            	(object, i) => (
-            	<li>{object}</li>)
-            	)
-            } </ul>
-            <img src={imgmap} alt="map"/>
-            <h2>{probability}</h2>
+            <div className="box">
+                <div className="map-box">
+                <img src={imgmap} alt="map" className="school-map"/>
+                <p className="card-subhead">Buses Stop In </p>
+                    <ul>{props.data.stops.map(
+                    (object, i) => (
+                    <li className="card-nabe">{object}</li>)
+                    )
+                    } </ul>
+                </div>
+                <p onClick={props.click} className="school-title"> 
+                {props.data.name}</p>
+                <p className="card-numbers"> <span className="heavy">{spots}</span> spots for <span className="heavy">{applicants}</span> applicants</p>
+                <p className="card-numbers">Grades {ktranslator} - {props.data.highest_grade}</p>
             
+            
+                <h2>{probability}</h2>
+            </div>
         </div>
     );
 }
