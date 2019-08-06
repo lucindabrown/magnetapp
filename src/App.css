@@ -7,6 +7,110 @@
   text-align: center;
 }
 
+.odds {
+  color: rgb(8, 45, 70);
+  font-family: Roboto-Light;
+  font-size: 36px;
+  font-weight: 300;
+  height: 44px;
+  letter-spacing: 0px;
+  line-height: 44px;
+  padding: 20px;
+}
+
+.knob {
+  width: 25%;
+  display: inline-block;
+}
+
+.label-toggle {
+  color: rgb(8, 45, 70);
+  font-family: Roboto-Light;
+  font-size: 18px;
+  font-weight: 300;
+  height: 24px;
+  letter-spacing: 0px;
+  width: 265px;
+  display: inline-block;
+}
+
+input {
+  font-size: 20px;
+  padding:5px;
+
+}
+
+.hero {
+  background: rgb(42, 103, 255);
+  border-radius: 0px;
+  height: 740px;
+  background-image: url('https://lucindabrown.github.io/data/School/images/herom%20image.svg');
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.copy{
+    padding: 120px;
+}
+
+.lausd {
+  color: rgb(170, 218, 249);
+  font-family: Roboto-Bold;
+  font-size: 14px;
+  font-weight: bold;
+  height: 36px;
+  letter-spacing: 1.4px;
+  line-height: 36px;
+  text-transform: uppercase;
+  width: 465px;
+  color: rgb(170, 218, 249);
+
+}
+h1 {
+  width: 465px;
+  height: 128px;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  font-family: Roboto-Bold;
+  font-weight: bold;
+  letter-spacing: 0px;
+  line-height: 64px;
+}
+
+h2{
+  width: 389px;
+  height: 203px;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-family: Roboto-Light;
+  font-weight: 300;
+  letter-spacing: 0px;
+  line-height: 24px;
+}
+
+h2.odds {
+  margin: 0px auto;
+  padding: 30px 0px;
+}
+
+.map-module {
+  background: rgb(124, 207, 192);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-image: url('https://lucindabrown.github.io/data/School/images/map-big.png');
+  background-size: 720px, 602px;
+}
+
+.map-module h2 {
+  color: rgb(8, 45, 70);
+  font-size: 24px;
+  font-weight: 300;
+  height: 147px;
+  letter-spacing: 0px;
+  line-height: 38px;
+  width: 447px;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -16,17 +120,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

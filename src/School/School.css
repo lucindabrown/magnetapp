@@ -5,7 +5,7 @@
 
 .school {
 	width: 500px;
-	height: 350px;
+	height: 330px;
 	display: inline-block;
 	font-family: RobotoCondensed;
 	background: rgb(255, 255, 255);
@@ -30,6 +30,7 @@
 	line-height: 36px;
 	width: 308px;
 	margin: 0;
+	min-height: 72px;
 }
 
 .card-subhead {
@@ -88,4 +89,10 @@ img.school-map {
 .map-box {
 	float: right;
 	width:164px;
+}
+
+.prob-score {
+	width: 296px;
+	height: 108px;
+	margin-top: 61px;
 }

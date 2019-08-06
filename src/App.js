@@ -72,24 +72,46 @@ class App extends Component {
 
     return (
       <div className="App">
-        
-        <p>{''+this.state.phbao} </p>
-        <p>{''+this.state.gifted} </p>
+        <div className="hero">
+          <div className="copy">
+            <p className="lausd">los angeles unified school district</p>
+            <h1>Magnet School Finder</h1>
+            <h2><p>Discover some of the most popular K-5 magnets in Los Angeles.</p>
 
-<div className="controls-container">
+            <p>Learn which bus stops serve which schools. </p>
 
-        <label >Grade:</label>
-        <input type="number" value={this.state.grade} onChange={this.handleGradeChange} min="0" max="4" /> 
+            <p><strong>Understand the odds of getting in at every grade level.</strong></p>
+            </h2>
+          </div>
+        </div>
+        <div className="map-module">
+          <div className="copy">
+          <h2><p>There are over 1200 LAUSD bus stops operating every day. They take kids across town and back, for free, as part of the magnet program.</p>
+          </h2>
+          </div>
+        </div>
+        <div className="controls-container">
+          <h2 className="odds">Understand Your Odds</h2>
+          <div className="knob">
+            <label className="label-toggle">My child will be in this grade next school year:</label>
+            <input type="number" value={this.state.grade} onChange={this.handleGradeChange} min="0" max="5" />
+          </div>
         
-        <label >Rejections:</label>
-        <input type="number" value={this.state.rejections} onChange={this.handleRejectionsChange} min="0" max="3" /> 
+          <div className="knob">
+            <label className="label-toggle">Number of consecutive years my child has been rejected by the lottery</label>
+            <input type="number" value={this.state.rejections} onChange={this.handleRejectionsChange} min="0" max="3" /> 
+          </div>
         
-        <label >Phbao:</label>
-        <input type="checkbox" checked={this.state.phbao} onChange={this.handlePhbaoChange} /> 
-
-        <label >Gifted:</label>
-        <input type="checkbox" checked={this.state.gifted} onChange={this.handleGiftedChange} /> 
-</div>
+          <div className="knob">
+            <input type="checkbox" checked={this.state.phbao} onChange={this.handlePhbaoChange} />
+            <label className="label-toggle">My home school is PHBAO</label>
+          </div>
+        
+          <div className="knob">
+            <input type="checkbox" checked={this.state.gifted} onChange={this.handleGiftedChange} />
+            <label className="label-toggle">My child has tested gifted or is likely to test gifted in second grade</label>
+          </div>
+        </div>
 
         <div className="card-container">
           {this.state.schools.map(

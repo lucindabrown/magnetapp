@@ -25,6 +25,8 @@ const school = ( props ) => {
     	}
     	probability = Math.round(probability);
     }
+    let probscore = "https://lucindabrown.github.io/data/School/images/"+probability+".svg";
+    
 
     if(ktranslator < 1){
         ktranslator = "K";
@@ -49,7 +51,7 @@ const school = ( props ) => {
                 <p className="card-numbers">Grades {ktranslator} - {props.data.highest_grade}</p>
             
             
-                <h2>{probability}</h2>
+                <img src={probscore} alt="prob" className="prob-score"/>
             </div>
         </div>
     );
